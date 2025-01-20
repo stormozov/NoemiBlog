@@ -2,7 +2,11 @@
   Основной файл стилей проекта.
 */
 
-/* Переменные */
+
+/* 
+  ПЕРЕМЕННЫЕ
+*/
+
 
 :root {
   /* Цвета */
@@ -11,6 +15,7 @@
   --color-text-grey: #909090;
   --color-accent: #b59f5b;
   --color-bg-grey: #f4f7f6;
+  --color-img-bg-default: #314b70;
   --color-border: #eeeeee;
 
   /* Прозрачность */
@@ -18,20 +23,25 @@
 
   /* Размеры и отступы */
   --width-container-primary: 1200px;
-  --padding-container-primary: 0 15px;
-  --padding-header: 28px 0 127px;
+  --padding-container-primary-sd: 0 15px;
+  --padding-container-primary-md: 0 35px;
+  --padding-header-sd: 28px 0 115px;
+  --padding-header-md: 28px 0 125px;
+  --padding-header-ld: 35px 0 210px;
   --padding-section: 60px 0 0;
 }
 
-/* Основные стили */
+
+/* 
+  ОБЩИЕ СТИЛИ
+*/
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
 
-body {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -43,27 +53,33 @@ a {
   text-decoration: none;
 }
 
-.container {
-  max-width: var(--width-container-primary);
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--padding-container-primary);
+h1 {
+  margin: 0;
+
+  font-size: 1.625rem;
+  line-height: 2.25rem;
 }
 
-h1 {
-  font-size: 2.813rem;
-  line-height: 4.688rem;
+.container {
+  padding: var(--padding-container-primary-sd);
 }
+
 
 /* 
   СЕКЦИЯ: ШАПКА
 */
 
+
 header.header-main-page {
   position: relative;
 
-  padding: var(--padding-header);
-  background: #314b70 url("../img/header/banner-bg.jpg") no-repeat center center / cover;
+  padding: var(--padding-header-ld);
+
+  background-color: var(--color-img-bg-default);
+  background-image: url("../img/header/banner-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
 
   color: var(--color-text-secondary);
 }
@@ -78,7 +94,7 @@ header.header-main-page::before {
   width: 100%;
   height: 100%;
 
-  background-color: #0f0d0e;
+  background-color: var(--color-text-primary);
   opacity: var(--opacity-bg-main);
 }
 
@@ -91,55 +107,150 @@ header.header-main-page::before {
 
 .header__top {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 106px;
+  flex-direction: column-reverse;
 }
 
-a.logo {
+.header__top a.logo {
+  align-self: center;
+  margin: 174px 0 35px;
+
   line-height: 0;
 }
 
-ul.nav-primary__list {
-  display: flex;
-  gap: 35px;
+nav.nav-primary {
+  align-self: flex-end;
+}
 
-  font-size: 13px;
-  text-transform: uppercase;
+ul.nav-primary__list {
+  display: none;
+  font-size: 18px;
+  text-align: center;
 }
 
 a.nav-primary__link {
-  position: relative;
-
   font-size: 1em;
   color: inherit;
 }
 
-a.nav-primary__link::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-
-  width: 0;
-  height: 1px;
-
+button.nav-primary__hamburger > div {
+  width: 24px;
+  height: 3px;
   background-color: var(--color-text-secondary);
-
-  transition: width 0.3s ease-in-out;
 }
 
-a.nav-primary__link:hover::after {
-  width: 100%;
+button.nav-primary__hamburger > div:nth-child(2) {
+  margin: 5px 0;
 }
 
 .header__title {
-  max-width: 687px;
-  width: 100%;
-  margin: 0 auto;
-
   text-align: center;
   text-transform: uppercase;
+}
+
+
+/* 
+  МЕДИА-ЗАПРОСЫ
+*/
+
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  header.header-main-page {
+    background-image: url("../img/header/banner-bg-tablet.jpg");
+    background-position-x: left;
+
+    padding: var(--padding-header-sd);
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3.438rem;
+  }
+
+  .container {
+    padding: var(--padding-container-primary-md);
+  }
+
+  .header__top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 106px;
+  }
+
+  .header__top a.logo {
+    align-self: normal;
+    margin: 0;
+  }
+
+  nav.nav-primary {
+    align-self: center;
+  }
+
+  .header__title {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 980px) {
+  h1 {
+    font-size: 2.813rem;
+    line-height: 4.688rem;
+  }
+
+  ul.nav-primary__list {
+    display: flex;
+    gap: 35px;
+
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  button.nav-primary__hamburger {
+    display: none;
+  }
+
+  .header__title {
+    max-width: 687px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--width-container-primary);
+    padding: var(--padding-container-primary-md);
+    margin: 0 auto;
+  }
+
+  header.header-main-page {
+    background-image: url("../img/header/banner-bg.jpg");
+    background-position: center center;
+  }
+
+  a.nav-primary__link {
+    position: relative;
+  }
+
+  a.nav-primary__link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    width: 0;
+    height: 1px;
+
+    background-color: var(--color-text-secondary);
+
+    transition: width 0.3s ease-in-out;
+  }
+
+  a.nav-primary__link:hover::after {
+    width: 100%;
+  }
 }

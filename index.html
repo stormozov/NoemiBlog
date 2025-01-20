@@ -16,7 +16,11 @@
       <!-- Верхняя часть шапки -->
       <div class="header__top">
         <a href="#" class="logo" id="logo">
-          <img src="./src/img/header/noemi-logo.png" alt="logo | Noemi — блог о творчестве, спорте и образе жизни">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./src/img/header/noemi-logo-mobile.png">
+            <source media="(max-width: 980px)" srcset="./src/img/header/noemi-logo-tablet.png">
+            <img src="./src/img/header/noemi-logo.png" alt="logo | Noemi — блог о творчестве, спорте и образе жизни">
+          </picture>
         </a>
         <nav class="nav nav-primary" id="nav-primary">
           <ul class="nav-primary__list">
@@ -39,6 +43,11 @@
               <a href="#" class="nav-primary__link">Контакты</a>
             </li>
           </ul>
+          <button class="nav-primary__hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
         </nav>
       </div>
       <!-- Оффер -->

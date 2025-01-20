@@ -143,6 +143,19 @@ img {
    ========================================================================== */
 
 /**
+ * 1. Remove the border and box-shadow.
+ * 2. Change background color on transparent.
+ * 3. Set cursor to pointer.
+ */
+
+button {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
