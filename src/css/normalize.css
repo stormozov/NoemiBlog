@@ -3,6 +3,35 @@
 /* Document
    ========================================================================== */
 
+:root {
+  /* Цвета */
+  --color-text-primary: #0f0d0e;
+  --color-text-secondary: #ffffff;
+  --color-text-grey: #909090;
+  --color-accent: #b59f5b;
+  --color-bg-grey: #f4f7f6;
+  --color-img-bg-default: #314b70;
+  --color-border: #eeeeee;
+
+  /* Прозрачность */
+  --opacity-bg-main: 0.6;
+
+  /* Размеры и отступы */
+  --width-container-primary: 1200px;
+  --padding-header-sd: 28px 0 115px;
+  --padding-header-md: 28px 0 125px;
+  --padding-header-ld: 35px 0 210px;
+  --padding-section: 60px 0 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", sans-serif;
+}
+
 /* Sections
    ========================================================================== */
 
@@ -22,14 +51,25 @@ main {
   display: block;
 }
 
+/*
+ * Container for the content
+ */
+
+.container {
+  padding: 0 15px;
+}
+
+/* Headings
+   ========================================================================== */
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: 1.625rem;
+  line-height: 2.25rem;
 }
 
 /* Grouping content
@@ -56,15 +96,25 @@ pre {
   font-size: 1em; /* 2 */
 }
 
+/**
+ * Remove the list style for unordered lists
+ */
+
+ul {
+  list-style: none;
+}
+
 /* Text-level semantics
    ========================================================================== */
 
 /**
- * Remove the gray background on active links in IE 10.
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove the link underline.
  */
 
 a {
-  background-color: transparent;
+  background-color: transparent; /* 1 */
+  text-decoration: none; /* 2 */
 }
 
 /**
@@ -149,10 +199,10 @@ img {
  */
 
 button {
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
-  cursor: pointer;
+  border: none; /* 1 */
+  box-shadow: none; /* 1 */
+  background-color: transparent; /* 2 */
+  cursor: pointer; /* 3 */
 }
 
 /**
