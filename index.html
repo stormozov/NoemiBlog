@@ -10,8 +10,8 @@
    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
-  <!-- СЕКЦИЯ: ШАПКА -->
-  <header class="header header-main-page" id="header header-main-page">
+  <!-- СЕКЦИЯ: ШАПКА И ПЕРВЫЙ ЭКРАН -->
+  <header class="header header-main-page" id="header-main-page">
     <div class="container">
       <!-- Верхняя часть шапки -->
       <div class="header__top">
@@ -25,22 +25,22 @@
         <nav class="nav nav-primary" id="nav-primary">
           <ul class="nav-primary__list">
             <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link">Главная</a>
+              <a href="#" class="nav-primary__link link-underline">Главная</a>
             </li>
             <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link">Посты</a>
+              <a href="#" class="nav-primary__link link-underline">Посты</a>
             </li>
             <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link">Статьи</a>
+              <a href="#" class="nav-primary__link link-underline">Статьи</a>
             </li>
             <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link">Теги</a>
+              <a href="#" class="nav-primary__link link-underline">Теги</a>
             </li>
             <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link">Темы</a>
+              <a href="#" class="nav-primary__link link-underline">Темы</a>
             </li>
             <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link">Контакты</a>
+              <a href="#" class="nav-primary__link link-underline">Контакты</a>
             </li>
           </ul>
           <button class="nav-primary__hamburger">
@@ -56,5 +56,115 @@
       </div>
     </div>
   </header>
+
+  <!-- ОСНОВНАЯ ЧАСТЬ СТРАНИЦЫ -->
+  <main class="main" id="main">
+    <!-- СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ -->
+    <section class="section section-trends" id="section-trends">
+      <div class="container">
+        <h2 class="section__title title-separator">Сейчас в тренде</h2>
+      </div>
+      <div class="trends">
+        <ul class="trends__list">
+          <li class="trends__item">
+            <article class="trends__article">
+              <div class="trends__img-wrapper">
+                <img
+                  class="trends__img"
+                  src="./src/img/trends/trend-1.jpg"
+                  alt="Сыры на красивых картинках из интернета"
+                />
+              </div>
+              <div class="trends__text-wrapper">
+                <ul class="post-tags">
+                  <li class="post-tags__item">
+                    <a href="#" class="post-tags__link link-underline">Lifestyle</a>
+                  </li>
+                  <li class="post-tags__item">
+                    <a href="#" class="post-tags__link link-underline">Interior</a>
+                  </li>
+                </ul>
+                <h2 class="trends__title">
+                  <a href="#" class="trends__title-link">Сейчас в тренде: сад на подоконнике</a>
+                </h2>
+              </div>
+            </article>
+          </li>
+
+          <li class="trends__item">
+            <article class="trends__article">
+              <div class="trends__img-wrapper">
+                <img
+                  class="trends__img"
+                  src="./src/img/trends/trend-2.jpg"
+                  alt="Сыры на красивых картинках из интернета"
+                />
+              </div>
+              <div class="trends__text-wrapper">
+                <ul class="post-tags">
+                  <li class="post-tags__item">
+                    <a href="#" class="post-tags__link link-underline">Food</a>
+                  </li>
+                </ul>
+                <h2 class="trends__title">
+                  <a href="#" class="trends__title-link">Сыры на красивых картинках из интернета: какие они на вкус?</a>
+                </h2>
+              </div>
+            </article>
+          </li>
+
+          <li class="trends__item">
+            <article class="trends__article">
+              <div class="trends__img-wrapper">
+                <img
+                  class="trends__img"
+                  src="./src/img/trends/trend-3.jpg"
+                  alt="Сыры на красивых картинках из интернета"
+                />
+              </div>
+              <div class="trends__text-wrapper">
+                <ul class="post-tags">
+                  <li class="post-tags__item">
+                    <a href="#" class="post-tags__link link-underline">Lifestyle</a>
+                  </li>
+                  <li class="post-tags__item">
+                    <a href="#" class="post-tags__link link-underline">Travel</a>
+                  </li>
+                </ul>
+                <h2 class="trends__title">
+                  <a href="#" class="trends__title-link">Собираемся в первый поход в горы</a>
+                </h2>
+              </div>
+            </article>
+          </li>
+
+          <li class="trends__item">
+            <article class="trends__article">
+              <div class="trends__img-wrapper">
+                <img
+                  class="trends__img"
+                  src="./src/img/trends/trend-4.jpg"
+                  alt="Сыры на красивых картинках из интернета"
+                />
+              </div>
+              <div class="trends__text-wrapper">
+                <ul class="post-tags">
+                  <li class="post-tags__item">
+                    <a href="#" class="post-tags__link link-underline">Food</a>
+                  </li>
+                  <li class="post-tags__item">
+                    <a href="#" class="post-tags__link link-underline">Health</a>
+                  </li>
+                </ul>
+                <h2 class="trends__title">
+                  <a href="#" class="trends__title-link">Сколько витамина С в лимонах?</a>
+                </h2>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

@@ -87,7 +87,104 @@ button.nav-primary__hamburger > div:nth-child(2) {
 
 .header__title {
   text-align: center;
+}
+
+
+/* 
+  СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ
+*/
+
+
+.trends__list,
+.post-tags
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trends__list {
+  gap: 4px;
+}
+
+.trends__item,
+.trends__img,
+.trends__title,
+.trends__title-link
+{
+  width: 100%;
+}
+
+.trends__article {
+  position: relative;
+
+  max-height: 250px;
+  height: 100%;
+
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
+
+.trends__img-wrapper {
+  height: 100%;
+}
+
+.trends__img-wrapper::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-text-primary);
+  opacity: var(--opacity-bg-main);
+}
+
+.trends__img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+
+  background-color: var(--color-img-bg-default);
+}
+
+.post-tags {
+  gap: 18px;
+
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-accent);
   text-transform: uppercase;
+}
+
+.post-tags__link {
+  position: relative;
+  color: var(--color-accent);
+}
+
+.trends__text-wrapper {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  padding: 20px;
+
+  border: 3px solid rgba(181,159,91,0.4);
+
+  transition: padding 0.3s ease-in-out;
+}
+
+.trends__title-link {
+  display: inline-block;
+  color: inherit;
 }
 
 
@@ -111,10 +208,15 @@ button.nav-primary__hamburger > div:nth-child(2) {
     line-height: 3.438rem;
   }
 
+  h2 {
+    font-size: 17px;
+  }
+
   .container {
     padding: 0 35px;
   }
 
+  /* СЕКЦИЯ: ШАПКА */
   .header__top {
     flex-direction: row;
     justify-content: space-between;
@@ -136,6 +238,15 @@ button.nav-primary__hamburger > div:nth-child(2) {
     max-width: 640px;
     width: 100%;
     margin: 0 auto;
+  }
+
+  /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
+  .trends__item {
+    flex: 1 1 calc(50% - 4px);
+  }
+
+  .trends__text-wrapper {
+    padding: 35px;
   }
 }
 
@@ -163,37 +274,50 @@ button.nav-primary__hamburger > div:nth-child(2) {
 }
 
 @media (min-width: 1200px) {
+  h2 {
+    font-size: 20px;
+  }
+
   .container {
     max-width: var(--width-container-primary);
     padding: 0 15px;
     margin: 0 auto;
   }
 
+  /* СЕКЦИЯ: ШАПКА */
   header.header-main-page {
     background-image: url("../img/header/banner-bg.jpg");
     background-position: center center;
   }
 
-  a.nav-primary__link {
-    position: relative;
-  }
-
-  a.nav-primary__link::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-
-    width: 0;
-    height: 1px;
-
+  .nav-primary a.link-underline::after {
     background-color: var(--color-text-secondary);
-
-    transition: width 0.3s ease-in-out;
   }
 
-  a.nav-primary__link:hover::after {
+  a.link-underline:hover::after {
     width: 100%;
+  }
+
+  /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
+  .trends__article {
+    max-height: none;
+  }
+
+  .trends a.link-underline::after {
+    background-color: var(--color-accent);
+  }
+
+  .trends__article:hover .trends__text-wrapper {
+    padding: 45px 35px 35px;
+  }
+
+  .trends__text-wrapper:hover .trends__title-link {
+    color: var(--color-accent);
+  }
+}
+
+@media (min-width: 1440px) {
+  .trends__list {
+    flex-wrap: nowrap;
   }
 }
