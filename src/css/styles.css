@@ -95,6 +95,10 @@ button.nav-primary__hamburger > div:nth-child(2) {
 */
 
 
+.section-trends {
+  padding-top: 64px;
+}
+
 .trends__list,
 .post-tags
 {
@@ -189,9 +193,218 @@ button.nav-primary__hamburger > div:nth-child(2) {
 
 
 /* 
+  СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ
+*/
+
+
+.homepage-main .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-main .sidebar-section-title {
+  text-align: center;
+}
+
+.sidebar__section:not(:last-child) {
+  padding-bottom: 40px;
+}
+
+
+/* 
+  КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ)
+*/
+
+
+.posts {
+  color: var(--color-text-primary);
+}
+
+.posts__item--last-post-section {
+  padding-bottom: 20px;
+  border-bottom: 3px solid var(--color-border);
+}
+
+.posts__item--last-post-section:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.posts__article {
+  display: flex;
+}
+
+.posts__article--last-post-section {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.posts__info {
+  font-size: 12px;
+}
+
+.posts__info--last-post-section {
+  margin: 22px 0;
+}
+
+.posts__date {
+  color: var(--color-text-grey);
+}
+
+.posts__author {
+  margin-left: 14px;
+  font-weight: 700;
+}
+
+.posts__link {
+  color: inherit;
+}
+
+.posts__desc {
+  font-size: 15px;
+}
+
+.posts__desc:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+
+/* 
+  СЕКЦИЯ (САЙДБАР): НОВЫЕ ПОСТЫ
+*/
+
+
+.sidebar-section-title {
+  margin-bottom: 24px;
+}
+
+.posts__item--new-post-section:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.posts__article--new-post-section {
+  gap: 18px;
+}
+
+.posts__info--new-post-section {
+  margin-bottom: 5px;
+}
+
+
+/* 
+  СЕКЦИЯ (САЙДБАР): ФОРМА ПОИСКА
+*/
+
+
+.search-form__form {
+  display: flex;
+}
+
+.search-form__btn {
+  width: auto;
+  padding: 13px 15px;
+  background-color: var(--color-accent);
+}
+
+.search-form__btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* 
+  СЕКЦИЯ (САЙДБАР): НОВОСТНАЯ РАССЫЛКА
+*/
+
+
+.newsletter__btn {
+  margin-top: 17px;
+}
+
+
+/* 
+  СЕКЦИЯ (САЙДБАР): ТЕГИ
+*/
+
+
+.tags {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.tags__list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tags__link {
+  display: block;
+  padding: 8px 12px;
+  border: 3px solid var(--color-border);
+
+  font-size: 1em;
+  color: inherit;
+}
+
+
+/* 
+  СЕКЦИЯ (САЙДБАР): ТЕМЫ
+*/
+
+
+.topics {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.topics__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.topics__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.topics__link {
+  display: inline-block;
+  padding: 10px 0 12px;
+
+  font-size: 1em;
+  color: inherit;
+}
+
+.topics__count {
+  font-size: 12px;
+  color: var(--color-accent);
+}
+
+
+/* 
   МЕДИА-ЗАПРОСЫ
 */
 
+
+@media (min-width: 381px) and (max-width: 767px) {
+  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
+  .posts__list--last-post-section {
+    max-width: 381px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
+  .posts__img--last-post-section {
+    width: 100%;
+  }
+}
 
 @media (min-width: 641px) and (max-width: 1199px) {
   header.header-main-page {
@@ -248,6 +461,40 @@ button.nav-primary__hamburger > div:nth-child(2) {
   .trends__text-wrapper {
     padding: 35px;
   }
+
+  /* СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ */
+  .homepage-main .container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 35px;
+  }
+
+  .section-last-posts {
+    max-width: 392px;
+    width: 100%;
+  }
+
+  .homepage-main .sidebar {
+    max-width: 270px;
+    width: 100%;
+  }
+
+  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
+  .posts__item--last-post-section:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .posts__info--last-post-section {
+    margin: 30px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
+  .posts__item--last-post-section:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
 }
 
 @media (min-width: 980px) {
@@ -270,6 +517,19 @@ button.nav-primary__hamburger > div:nth-child(2) {
 
   .header__title {
     max-width: 687px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* СЕКЦИЯ: ПОСЛЕДНИЕ ПОСТЫ */
+  .section-last-posts {
+    max-width: 773px;
+  }
+
+  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
+  .posts__article--last-post-section {
+    flex-direction: row;
+    gap: 30px;
   }
 }
 
@@ -303,7 +563,9 @@ button.nav-primary__hamburger > div:nth-child(2) {
     max-height: none;
   }
 
-  .trends a.link-underline::after {
+  .trends a.link-underline::after,
+  .posts a.link-underline::after
+  {
     background-color: var(--color-accent);
   }
 
@@ -312,6 +574,40 @@ button.nav-primary__hamburger > div:nth-child(2) {
   }
 
   .trends__text-wrapper:hover .trends__title-link {
+    color: var(--color-accent);
+  }
+
+  /* СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ */
+  .sidebar__section:not(:last-child) {
+    padding-bottom: 60px;
+  }
+
+  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
+  .posts__item--last-post-section {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .posts__item--last-post-section:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .posts__info--last-post-section {
+    margin: 35px 0 50px;
+  }
+
+  .posts__link:hover {
+    color: var(--color-accent);
+  }
+
+  /* СЕКЦИЯ (САЙДБАР): ТЕГИ */
+  .tags__link:hover {
+    background: var(--color-border);
+    color: var(--color-accent);
+  }
+
+  /* СЕКЦИЯ (САЙДБАР): ТОПИКИ */
+  .topics__link:hover {
     color: var(--color-accent);
   }
 }

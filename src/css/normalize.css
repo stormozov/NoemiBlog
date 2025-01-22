@@ -22,6 +22,9 @@
   --padding-header-md: 28px 0 125px;
   --padding-header-ld: 35px 0 210px;
   --padding-section: 60px 0 0;
+
+  /* Переходы */
+  --transition-default: all 0.3s ease-in-out;
 }
 
 * {
@@ -49,7 +52,10 @@ body {
 
 main {
   display: block;
-  padding: 64px 0;
+}
+
+.section:not(:last-child) {
+  padding-bottom: 64px;
 }
 
 /*
@@ -78,6 +84,10 @@ h1 {
 
 h2 {
   font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
 }
 
 .section__title {
@@ -142,7 +152,7 @@ a {
   background-color: transparent; /* 1 */
   text-decoration: none; /* 2 */
 
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-default);
 }
 
 a.link-underline {
@@ -242,32 +252,31 @@ img {
    ========================================================================== */
 
 /**
- * 1. Remove the border and box-shadow.
- * 2. Change background color on transparent.
- * 3. Set cursor to pointer.
+ * 1. Set default width & padding
+ * 2. Set default background color on accent color.
+ * 3. Remove the border and box-shadow.
+ * 4. Set cursor to pointer.
  */
 
 button {
-  border: none; /* 1 */
-  box-shadow: none; /* 1 */
-  background-color: transparent; /* 2 */
-  cursor: pointer; /* 3 */
+  width: 100%; /* 1 */
+  padding: 13px 15px; /* 1 */
+  background-color: var(--color-accent); /* 2 */
+  border: none; /* 3 */
+  box-shadow: none; /* 3 */
+
+  cursor: pointer; /* 4 */
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+
+  transition: var(--transition-default);
 }
 
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+button:hover {
+  background-color: var(--color-text-primary);
 }
 
 /**
@@ -281,13 +290,46 @@ input { /* 1 */
 }
 
 /**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
+ * Zeroing out the properties of the input tag
  */
 
-button,
-select { /* 1 */
-  text-transform: none;
+input {
+  width: 100%;
+  padding: 13px 15px;
+  background-color: var(--color-bg-grey);
+  border: 1px solid transparent;
+  outline: transparent;
+
+  font-size: 13px;
+  color: #707171;
+
+  transition: var(--transition-default);
+}
+
+/*
+ * Set transition for placeholder
+ */
+
+input::placeholder {
+  transition: var(--transition-default);
+}
+
+/*
+ * Set transparent placeholder for hover state
+ */
+
+input:hover::placeholder,
+input:focus::placeholder
+{
+  color: transparent;
+}
+
+/*
+ * Set border-bottom for focus state
+ */
+
+input:focus {
+  border-bottom: 1px solid #ebe7d7;
 }
 
 /**
