@@ -252,15 +252,16 @@ img {
    ========================================================================== */
 
 /**
- * 1. Set default width & padding
+ * 1. Set default background color on accent color.
  * 2. Set default background color on accent color.
  * 3. Remove the border and box-shadow.
  * 4. Set cursor to pointer.
  */
 
-button {
-  width: 100%; /* 1 */
-  padding: 13px 15px; /* 1 */
+button,
+a.btn
+{
+  padding: 15px 28px; /* 1 */
   background-color: var(--color-accent); /* 2 */
   border: none; /* 3 */
   box-shadow: none; /* 3 */

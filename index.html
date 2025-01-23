@@ -165,10 +165,10 @@
   </section>
 
   <!-- ОСНОВНАЯ ЧАСТЬ СТРАНИЦЫ -->
-  <section class="homepage-main" id="homepage-main">
+  <section class="section homepage-main" id="homepage-main">
     <div class="container">
       <!-- СЕКЦИЯ: ПОСЛЕДНИЕ ПОСТЫ -->
-      <section class="section section-last-posts" id="section-last-posts">
+      <section class="section-last-posts" id="section-last-posts">
         <div class="posts">
           <ul class="posts__list posts__list--last-post-section">
             <li class="posts__item posts__item--last-post-section">
@@ -607,6 +607,94 @@
           </div>
         </section>
       </aside>
+    </div>
+  </section>
+
+  <!-- СЕКЦИЯ: НАШИ ИЗДЕЛИЯ -->
+  <section class="section section-goods" id="section-goods">
+    <div class="container">
+      <h2 class="section__title title-separator">Наши изделия</h2>
+      <div class="goods">
+        <ul class="goods__list">
+          <li class="goods__item">
+            <div class="goods__img-wrapper">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./src/img/goods/shop-item-mobile-1.jpg">
+                <source media="(max-width: 1199px)" srcset="./src/img/goods/shop-item-tablet-1.jpg">
+                <img class="goods__img" src="./src/img/goods/shop-item-desk-1.jpg" alt="Подушки на диван">
+              </picture>
+            </div>
+
+            <div class="goods__text-wrapper">
+              <h2 class="goods__title">Подушки на диван</h2>
+
+              <p class="goods__desc">
+                Набор из двух подушек с модными принтами. Видео о создании 
+                <a href="#" class="goods__link">здесь</a>.
+              </p>
+
+              <footer class="goods__footer">
+                <div class="goods__price-wrapper">
+                  <p class="goods__price goods__price--old">1000 &#8381;</p>
+                  <p class="goods__price goods__price--new">800 &#8381;</p>
+                </div>
+                <a href="#" class="btn goods__btn">В магазин</a>
+              </footer>
+            </div>
+          </li>
+
+          <li class="goods__item">
+            <div class="goods__img-wrapper">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./src/img/goods/shop-item-mobile-2.jpg">
+                <source media="(max-width: 1199px)" srcset="./src/img/goods/shop-item-tablet-2.jpg">
+                <img class="goods__img" src="./src/img/goods/shop-item-desk-2.jpg" alt="Кукла «Зайчик»">
+              </picture>
+            </div>
+
+            <div class="goods__text-wrapper">
+              <h2 class="goods__title">Кукла «Зайчик»</h2>
+
+              <p class="goods__desc">
+                Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#" class="goods__link">весенняя серия постов</a> в блоге и несколько подкастов.
+              </p>
+
+              <footer class="goods__footer">
+                <div class="goods__price-wrapper">
+                  <p class="goods__price">3500 &#8381;</p>
+                </div>
+                <a href="#" class="btn goods__btn">В магазин</a>
+              </footer>
+            </div>
+          </li>
+
+          <li class="goods__item">
+            <div class="goods__img-wrapper">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./src/img/goods/shop-item-mobile-3.jpg">
+                <source media="(max-width: 1199px)" srcset="./src/img/goods/shop-item-tablet-3.jpg">
+                <img class="goods__img" src="./src/img/goods/shop-item-desk-3.jpg" alt="Шестиугольная рамка">
+              </picture>
+            </div>
+
+            <div class="goods__text-wrapper">
+              <h2 class="goods__title">Шестиугольная рамка</h2>
+
+              <p class="goods__desc">
+                Необычная рамка для украшения дома из видео <a href="#" class="goods__link">«Как сделать рамку из подручных средств за 30 минут»</a>
+              </p>
+
+              <footer class="goods__footer">
+                <div class="goods__price-wrapper">
+                  <p class="goods__price goods__price--old">500 &#8381;</p>
+                  <p class="goods__price goods__price--new">400 &#8381;</p>
+                </div>
+                <a href="#" class="btn goods__btn">В магазин</a>
+              </footer>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </body>
