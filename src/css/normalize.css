@@ -7,7 +7,8 @@
   /* Цвета */
   --color-text-primary: #0f0d0e;
   --color-text-secondary: #ffffff;
-  --color-text-grey: #909090;
+  --color-text-grey-dim: #909090;
+  --color-text-grey-muted: #999999;
   --color-accent: #b59f5b;
   --color-bg-grey: #f4f7f6;
   --color-img-bg-default: #314b70;

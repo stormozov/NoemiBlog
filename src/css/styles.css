@@ -243,7 +243,7 @@ button.nav-primary__hamburger > div:nth-child(2) {
 }
 
 .posts__date {
-  color: var(--color-text-grey);
+  color: var(--color-text-grey-dim);
 }
 
 .posts__author {
@@ -452,6 +452,52 @@ button.nav-primary__hamburger > div:nth-child(2) {
   margin-bottom: -0.25em;
   font-size: 0.875em;
   text-decoration: line-through;
+}
+
+
+/* 
+  СЕКЦИЯ: ФУТЕР
+*/
+
+
+.footer {
+  padding-bottom: 40px;
+}
+
+.social-media {
+  background-color: var(--color-bg-grey);
+  padding: 32px;
+}
+
+.social-media__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.social-media__link {
+  width: 20px;
+  height: 20px;
+}
+
+.social-media__icon {
+  width: inherit;
+  height: inherit;
+  transition: var(--transition-default);
+}
+
+.social-media__link:focus .social-media__icon {
+  fill: var(--color-accent);
+}
+
+.footer__copy {
+  margin-top: 40px;
+  
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-grey-muted);
+  text-align: center;
 }
 
 
@@ -730,6 +776,16 @@ button.nav-primary__hamburger > div:nth-child(2) {
 
   .goods__link:hover {
     text-decoration: underline;
+  }
+
+  /* СЕКЦИЯ: ФУТЕР */
+  .social-media__link:hover .social-media__icon {
+    fill: var(--color-accent);
+    transform: rotate(-360deg);
+  }
+
+  .footer__copy {
+    margin-top: 70px;
   }
 }
 
