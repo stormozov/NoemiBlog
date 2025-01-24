@@ -81,10 +81,13 @@ header.header-main-page::before {
 .header__top {
   display: flex;
   flex-direction: column-reverse;
+
+  font-size: 24px;
 }
 
-.header__top a.logo {
+.logo--header {
   align-self: center;
+  width: 11.188em;
   margin: 174px 0 35px;
 
   line-height: 0;
@@ -650,7 +653,7 @@ button.search-form__btn {
     margin-bottom: 106px;
   }
 
-  .header__top a.logo {
+  .logo--header {
     align-self: normal;
     margin: 0;
   }
@@ -702,6 +705,11 @@ button.search-form__btn {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  /* СЕКЦИЯ: ШАПКА */
+  .header__top {
+    font-size: 14.1px;
+  }
+
   /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
   .posts__item--last-post-section:last-child {
     padding-bottom: 0;
@@ -781,6 +789,10 @@ button.search-form__btn {
   header.header-main-page {
     background-image: url("../img/header/banner-bg.jpg");
     background-position: center center;
+  }
+
+  .header__top {
+    font-size: 16px;
   }
 
   .nav-primary a.link-underline::after {
