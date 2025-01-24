@@ -136,7 +136,7 @@ button.nav-primary__hamburger > div:nth-child(2) {
 
 
 .section-trends {
-  padding-top: 64px;
+  padding-top: 45px;
 }
 
 .trends__list,
@@ -571,12 +571,31 @@ button.search-form__btn {
 */
 
 
-@media (min-width: 381px) and (max-width: 767px) {
+@media (orientation: landscape) and (min-width: 461px) and (max-width: 719px) {
   /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__list--last-post-section {
+  .posts__list--last-post-section,
+  .sidebar__section {
     max-width: 381px;
     width: 100%;
     margin: 0 auto;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 461px) and (max-width: 767px) {
+  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
+  .posts__list--last-post-section,
+  .sidebar__section
+  {
+    max-width: 381px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 720px) and (max-width: 767px) {
+  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
+  .posts__article--last-post-section {
+    flex-direction: row;
   }
 }
 
@@ -584,6 +603,13 @@ button.search-form__btn {
   /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
   .posts__img--last-post-section {
     width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
+  .trends__item {
+    flex: 1 1 calc(50% - 4px);
   }
 }
 
@@ -669,10 +695,6 @@ button.search-form__btn {
   }
 
   /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
-  .trends__item {
-    flex: 1 1 calc(50% - 4px);
-  }
-
   .trends__text-wrapper {
     padding: 35px;
   }
@@ -767,6 +789,10 @@ button.search-form__btn {
     font-size: 20px;
   }
 
+  .section:not(:last-child) {
+    padding-bottom: 64px;
+  }
+
   .container {
     max-width: var(--width-container-primary);
     padding: 0 15px;
@@ -800,6 +826,10 @@ button.search-form__btn {
   }
 
   /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
+  .section-trends {
+    padding-top: 45px;
+  }
+
   .trends__article {
     max-height: none;
   }
@@ -867,7 +897,18 @@ button.search-form__btn {
   }
 }
 
-@media (min-width: 1440px) {
+@media (width: 1280px) {
+  /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
+  .trends__list {
+    flex-wrap: nowrap;
+  }
+
+  .trends__title {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1366px) {
   /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
   .trends__list {
     flex-wrap: nowrap;

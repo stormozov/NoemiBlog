@@ -56,7 +56,7 @@ main {
 }
 
 .section:not(:last-child) {
-  padding-bottom: 64px;
+  padding-bottom: 45px;
 }
 
 /*
