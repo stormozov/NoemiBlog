@@ -520,7 +520,7 @@
 
         <!-- СЕКЦИЯ: ПОИСК -->
         <section class="sidebar__section search-form" id="search-form">
-          <form class="search-form__form" id="search-form" action="#" method="post">
+          <form class="search-form__form" id="search-form" action="#" method="get">
             <input class="search-form__input" type="search" placeholder="Найти..." required />
             <button class="btn search-form__btn" type="submit" title="Найти">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512"><g clip-path="url(#clip0)"><path fill="#fff" stroke="#B59F5B" d="M373.403 339.292l-.29.344.312.324 121.857 126.737c10.117 10.524 9.782 27.302-.733 37.42l.347.36-.347-.36c-4.948 4.763-11.466 7.383-18.338 7.383-7.261 0-14.034-2.884-19.072-8.116L334.357 375.686l-.297-.309-.351.246c-34.78 24.442-75.457 37.317-118.145 37.317-113.708 0-206.22-92.513-206.22-206.22C9.344 93.012 101.856.5 215.564.5c113.707 0 206.22 92.512 206.22 206.22 0 48.668-17.125 95.416-48.381 132.572zm-4.546-132.572c0-84.528-68.765-153.293-153.293-153.293S62.271 122.192 62.271 206.72s68.765 153.293 153.293 153.293 153.293-68.765 153.293-153.293z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h512v512H0z"/></clipPath></defs></svg>
@@ -531,7 +531,7 @@
         <!-- СЕКЦИЯ: ПОДПИСКА НА РАССЫЛКУ -->
         <section class="sidebar__section newsletter" id="newsletter">
           <h3 class="sidebar-section-title title-separator">Рассылка</h3>
-          <form class="newsletter__form" id="newsletter-form" action="#" method="post">
+          <form class="newsletter__form" id="newsletter-form" action="#" method="get">
             <input class="newsletter__input" type="email" name="newsletter-email" placeholder="Ваш e-mail-адрес" required />
             <button class="btn newsletter__btn" type="submit" title="Подписаться">Подписаться</button>
             <output class="newsletter__output" name="newsletter-output"></output>
@@ -765,5 +765,59 @@
       <p class="footer__copy">Copyright © 2009–2019 City Blog LLC.</p>
     </div>
   </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ ОБРАТНОЙ СВЯЗИ -->
+  <div class="modal">
+    <div class="modal__content">
+      <div class="modal__inner-wrapper">
+        <button class="modal__btn-close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 441 441">
+            <path fill="#fff" stroke="#000"
+              d="M220.336 170.564l.353.353.354-.353L390.288 1.318l49.796 49.773-169.269 169.245-.353.354.353.354 169.269 169.245-49.796 49.796-169.245-169.269-.354-.353-.353.353-169.27 169.269-49.748-49.796 169.245-169.245.353-.354-.353-.354L1.318 51.067 51.09 1.318l169.246 169.246z" />
+          </svg>
+        </button>
+
+        <form class="form form--modal" action="#" method="post">
+          <h2 class="section__title title-separator">Ваш фидбек</h2>
+
+          <div class="form__group">
+            <label class="form__label" for="modal-select">Как часто вы заходите на сайт?</label>
+            <select class="form__select" name="modal-select">
+              <option class="form__option" value="Почти каждый день">Почти каждый день</option>
+              <option class="form__option" value="Раз в несколько дней">Раз в несколько дней</option>
+              <option class="form__option" value="Раз в несколько недель">Раз в несколько недель</option>
+              <option class="form__option" value="Несколько раз в год">Несколько раз в год</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="modal-radio">Вы подписаны на e-mail рассылку?</label>
+            <div class="form__radio-group">
+              <label class="form__label--radio">
+                <input class="form__radio-input" type="radio" name="modal-radio" value="Да" checked />
+                <span class="form__radio-text">Да</span>
+              </label>
+              <label class="form__label--radio">
+                <input class="form__radio-input" type="radio" name="modal-radio" value="Нет" />
+                <span class="form__radio-text">Нет</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="modal-textarea">
+              Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+            </label>
+            <textarea class="form__textarea" name="modal-textarea" placeholder="Может, больше рецептов?"></textarea>
+          </div>
+
+          <button class="btn form__btn form__btn--modal">Отправить</button>
+
+          <output class="form__output"></output>
+        </form>
+      </div>
+    </div>
+    <div class="modal__overlay"></div>
+  </div>
 </body>
 </html>

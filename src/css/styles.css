@@ -537,6 +537,9 @@ button.search-form__btn {
   justify-content: center;
   flex-wrap: wrap;
   gap: 28px;
+
+  max-width: 260px;
+  margin: 0 auto;
 }
 
 .social-media__link {
@@ -562,6 +565,146 @@ button.search-form__btn {
   font-weight: 700;
   color: var(--color-text-grey-muted);
   text-align: center;
+}
+
+
+/* 
+  МОДАЛЬНОЕ ОКНО С ФОРМОЙ ОБРАТНОЙ СВЯЗИ
+  ==========================================================================
+*/
+
+
+/* Общие стили модального окна */
+.body-modal-open {
+  overflow-y: hidden;
+}
+
+.modal {
+  display: none;
+}
+
+.modal--open {
+  display: block;
+}
+
+.modal__overlay,
+.modal__content
+{
+  transition: var(--transition-default);
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100vw;
+  height: 100%;
+  background-color: var(--color-modal-overlay);
+}
+
+.modal__content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+
+  width: 90%;
+  height: 90%;
+
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.modal__inner-wrapper {
+  position: relative;
+  background-color: var(--color-text-secondary);
+}
+
+/* Кнопка закрытия модального окна */
+.modal__btn-close {
+  position: absolute;
+  top: -25px;
+  right: 0;
+
+  font-size: 18px;
+
+  transition: var(--transition-default);
+}
+
+.modal__btn-close svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* Форма в модальном окне */
+.form--modal {
+  width: 100%;
+  padding: 30px 26px;
+
+  background-color: var(--color-text-secondary);
+
+  font-size: 13px;
+}
+
+.form__group {
+  margin-bottom: 30px;
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.form__label--radio {
+  cursor: pointer;
+}
+
+.form__label--radio:not(:last-child) {
+  margin-right: 15px;
+}
+
+.form__radio-input {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+}
+
+.form__radio-input:checked + .form__radio-text::before {
+  background: url("../svg/form-circle.svg") no-repeat center center / cover;
+}
+
+.form__radio-text {
+  display: inline-block;
+}
+
+.form__radio-text::before {
+  content: "";
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+
+  background: url("../svg/form-empty-circle.svg") no-repeat center center / cover;
+
+  vertical-align: middle;
+}
+
+.form__btn--modal {
+  width: 100%;
+}
+
+.form__output {
+  display: none;
+  width: 100%;
+}
+
+.form__output--show {
+  display: inline-block;
+  margin-top: 30px;
 }
 
 
@@ -611,6 +754,16 @@ button.search-form__btn {
   .trends__item {
     flex: 1 1 calc(50% - 4px);
   }
+
+  /* МОДАЛЬНОЕ ОКНО */
+  .modal__content {
+    width: max-content;
+  }
+
+  .form--modal {
+    width: 390px;
+    padding: 50px 30px 54px;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
@@ -638,6 +791,25 @@ button.search-form__btn {
   /* СЕКЦИЯ: НАШИ ИЗДЕЛИЯ */
   .goods__text-wrapper {
     min-height: 267px;
+  }
+}
+
+@media (max-height: 660px) {
+  /* МОДАЛЬНОЕ ОКНО */
+  .modal__content {
+    overflow-y: auto;
+  }
+
+  .modal__btn-close {
+    position: relative;
+    top: 10px;
+    left: 10px;
+
+    font-size: 24px;
+  }
+
+  .modal__btn-close svg path {
+    fill: var(--color-text-primary);
   }
 }
 
@@ -723,6 +895,11 @@ button.search-form__btn {
 
   .posts__info--last-post-section {
     margin: 30px 0;
+  }
+
+  /* МОДАЛЬНОЕ ОКНО */
+  .modal__content {
+    height: auto;
   }
 }
 
@@ -894,6 +1071,11 @@ button.search-form__btn {
 
   .footer__copy {
     margin-top: 70px;
+  }
+
+  /* МОДАЛЬНОЕ ОКНО */
+  .modal__btn-close:hover {
+    transform: rotate(-360deg);
   }
 }
 
