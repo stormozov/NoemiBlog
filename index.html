@@ -11,7 +11,7 @@
 </head>
 <body>
   <!-- СЕКЦИЯ: ШАПКА И ПЕРВЫЙ ЭКРАН -->
-  <header class="header header-main-page" id="header-main-page">
+  <header class="header header--main-page" id="header-main-page">
     <div class="container">
       <!-- Верхняя часть шапки -->
       <div class="header__top">
@@ -23,34 +23,37 @@
               d="m861.808 165.967.009-.005.008-.005c41.291-26.275 86.341-37.543 138.935-37.543 52.58 0 93.88 11.261 138.94 37.548 41.32 26.295 75.13 60.101 101.42 101.42 26.28 41.293 37.55 86.343 37.55 135.169 0 48.823-11.27 93.882-37.56 138.948-26.28 45.059-60.08 75.103-101.42 101.409-41.29 26.275-86.34 37.543-138.93 37.543-48.821 0-93.878-11.263-138.943-37.548-41.335-26.305-75.126-56.348-101.41-101.404-26.287-45.063-37.551-86.355-37.554-138.927 3.76-45.089 15.032-93.909 37.553-135.204 26.304-41.331 56.348-75.12 101.402-101.401Zm-4.448 327.124c15.076 26.384 33.944 49.036 60.382 64.143 26.411 15.092 52.832 22.639 86.778 22.639 30.19 0 56.61-7.55 83.02-22.639 26.44-15.107 45.31-37.759 60.38-64.143 15.1-26.414 22.64-56.598 22.64-86.777 0-33.948-7.55-60.368-22.64-86.778-15.07-26.383-33.94-49.036-60.38-64.143-26.41-15.089-52.83-22.639-83.02-22.639-30.102 0-64.128 3.754-86.85 22.689l-.032.027c-22.552 18.793-45.184 37.652-60.278 64.066-15.095 26.415-22.639 56.598-22.639 86.778 0 30.179 7.544 60.363 22.639 86.777ZM1617.77 572.349h270.38v100.578h-371.46V135.938h363.94v100.578h-263.36v117.627h233.26v100.579h-233.26v117.627h.5ZM1834.67.5l-107.99 96.8162h-62.87L1723.39.5h111.28ZM2584.26 417.31l-176.42 247.736-168.89-232.691-.91-1.247v241.819h-100.58V114.453l269.97 386.201.41.574.41-.566 281.26-386.261v558.526h-104.34V416.036l-.91 1.274ZM3069.5 135.938v536.989h-104.34V135.938h104.34Z" />
           </svg>
         </a>
-        <nav class="nav nav-primary" id="nav-primary">
-          <ul class="nav-primary__list">
-            <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link link-underline">Главная</a>
+
+        <nav class="nav nav--primary" id="nav-primary">
+          <ul class="nav--primary__list">
+            <li class="nav--primary__item">
+              <a href="#" class="nav--primary__link link-underline">Главная</a>
             </li>
-            <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link link-underline">Посты</a>
+            <li class="nav--primary__item">
+              <a href="#" class="nav--primary__link link-underline">Посты</a>
             </li>
-            <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link link-underline">Статьи</a>
+            <li class="nav--primary__item">
+              <a href="#" class="nav--primary__link link-underline">Статьи</a>
             </li>
-            <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link link-underline">Теги</a>
+            <li class="nav--primary__item">
+              <a href="#" class="nav--primary__link link-underline">Теги</a>
             </li>
-            <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link link-underline">Темы</a>
+            <li class="nav--primary__item">
+              <a href="#" class="nav--primary__link link-underline">Темы</a>
             </li>
-            <li class="nav-primary__item">
-              <a href="#" class="nav-primary__link link-underline">Контакты</a>
+            <li class="nav--primary__item">
+              <a href="#" class="nav--primary__link link-underline">Контакты</a>
             </li>
           </ul>
-          <button class="nav-primary__hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+
+          <button class="nav--primary__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </nav>
       </div>
+
       <!-- Оффер -->
       <div class="header__offer">
         <h1 class="header__title">Блог о творчестве, спорте, и образе жизни</h1>
@@ -61,7 +64,7 @@
   <!-- СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ -->
   <section class="section section-trends" id="section-trends">
     <div class="container">
-      <h2 class="section__title title-separator">Сейчас в тренде</h2>
+      <h2 class="section__title title-separator">Сейчас в тренде</h2>
     </div>
     <div class="trends">
       <ul class="trends__list">
@@ -72,7 +75,7 @@
                 class="trends__img"
                 src="./src/img/trends/trend-1.jpg"
                 alt="Сыры на красивых картинках из интернета"
-              />
+              >
             </div>
             <div class="trends__text-wrapper">
               <ul class="post-tags">
@@ -97,7 +100,7 @@
                 class="trends__img"
                 src="./src/img/trends/trend-2.jpg"
                 alt="Сыры на красивых картинках из интернета"
-              />
+              >
             </div>
             <div class="trends__text-wrapper">
               <ul class="post-tags">
@@ -119,7 +122,7 @@
                 class="trends__img"
                 src="./src/img/trends/trend-3.jpg"
                 alt="Сыры на красивых картинках из интернета"
-              />
+              >
             </div>
             <div class="trends__text-wrapper">
               <ul class="post-tags">
@@ -144,7 +147,7 @@
                 class="trends__img"
                 src="./src/img/trends/trend-4.jpg"
                 alt="Сыры на красивых картинках из интернета"
-              />
+              >
             </div>
             <div class="trends__text-wrapper">
               <ul class="post-tags">
@@ -167,9 +170,11 @@
 
   <!-- ОСНОВНАЯ ЧАСТЬ СТРАНИЦЫ -->
   <section class="section homepage-main" id="homepage-main">
+    <h2 class="title-visually-hidden">Основная часть сайта</h2>
     <div class="container">
       <!-- СЕКЦИЯ: ПОСЛЕДНИЕ ПОСТЫ -->
       <section class="section-last-posts" id="section-last-posts">
+        <h2 class="title-visually-hidden">Последние новости</h2>
         <div class="posts">
           <ul class="posts__list posts__list--last-post-section">
             <li class="posts__item posts__item--last-post-section">
@@ -180,7 +185,7 @@
                       class="posts__img posts__img--last-post-section"
                       src="./src/img/posts/last-posts/last-post-1.jpg"
                       alt="10 мест, ради которых стоит проснуться на рассвете"
-                    />
+                    >
                   </a>
                 </div>
 
@@ -202,7 +207,7 @@
 
                   <div class="posts__info posts__info--last-post-section">
                     <span class="posts__date">10 июля 2019</span>
-                    <span class="posts__author">Неизвестный автор</span>
+                    <span class="posts__author">Неизвестный автор</span>
                   </div>
 
                   <p class="posts__desc">
@@ -220,7 +225,7 @@
                       class="posts__img posts__img--last-post-section"
                       src="./src/img/posts/last-posts/last-post-2.jpg"
                       alt="Йога для начинающих в домашних условиях"
-                    />
+                    >
                   </a>
                 </div>
 
@@ -242,7 +247,7 @@
 
                   <div class="posts__info posts__info--last-post-section">
                     <span class="posts__date">10 июля 2019</span>
-                    <span class="posts__author">Неизвестный автор</span>
+                    <span class="posts__author">Неизвестный автор</span>
                   </div>
 
                   <p class="posts__desc">
@@ -260,7 +265,7 @@
                       class="posts__img posts__img--last-post-section"
                       src="./src/img/posts/last-posts/last-post-3.jpg"
                       alt="Лучшие музыкальные фестивали этого лета"
-                    />
+                    >
                   </a>
                 </div>
 
@@ -279,7 +284,7 @@
 
                   <div class="posts__info posts__info--last-post-section">
                     <span class="posts__date">10 июля 2019</span>
-                    <span class="posts__author">Неизвестный автор</span>
+                    <span class="posts__author">Неизвестный автор</span>
                   </div>
 
                   <p class="posts__desc">
@@ -300,7 +305,7 @@
                       class="posts__img posts__img--last-post-section"
                       src="./src/img/posts/last-posts/last-post-4.jpg"
                       alt="Наукоёмкий подход к кулинарии"
-                    />
+                    >
                   </a>
                 </div>
 
@@ -322,7 +327,7 @@
 
                   <div class="posts__info posts__info--last-post-section">
                     <span class="posts__date">10 июля 2019</span>
-                    <span class="posts__author">Неизвестный автор</span>
+                    <span class="posts__author">Неизвестный автор</span>
                   </div>
 
                   <p class="posts__desc">
@@ -340,7 +345,7 @@
                       class="posts__img posts__img--last-post-section"
                       src="./src/img/posts/last-posts/last-post-5.jpg"
                       alt="Модные принты на подушках для интерьера"
-                    />
+                    >
                   </a>
                 </div>
 
@@ -365,7 +370,7 @@
 
                   <div class="posts__info posts__info--last-post-section">
                     <span class="posts__date">10 июля 2019</span>
-                    <span class="posts__author">Неизвестный автор</span>
+                    <span class="posts__author">Неизвестный автор</span>
                   </div>
 
                   <p class="posts__desc">
@@ -388,26 +393,26 @@
               <li class="posts__item posts__item--new-post-section">
                 <article class="posts__article posts__article--new-post-section">
                   <div class="last-posts__img-wrapper">
-                      <a href="#">
-                        <img
-                          class="posts__img"
-                          src="./src/img/posts/new-posts/post-prev-1.jpg"
-                          alt="Делаем модные принты на подушках для интерьера"
-                        />
+                    <a href="#">
+                      <img
+                        class="posts__img"
+                        src="./src/img/posts/new-posts/post-prev-1.jpg"
+                        alt="Делаем модные принты на подушках для интерьера"
+                      >
+                    </a>
+                  </div>
+
+                  <div class="posts__text-wrapper">
+                    <div class="posts__info posts__info--new-post-section">
+                      <span class="posts__date">14 июня 2019</span>
+                    </div>
+
+                    <h3 class="posts__title">
+                      <a href="#" class="posts__link">
+                        10 мест, ради которых стоит проснуться
                       </a>
-                    </div>
-
-                    <div class="posts__text-wrapper">
-                      <div class="posts__info posts__info--new-post-section">
-                        <span class="posts__date">14 июня 2019</span>
-                      </div>
-
-                      <h3 class="posts__title">
-                        <a href="#" class="posts__link">
-                          10 мест, ради которых стоит проснуться
-                        </a>
-                      </h3>
-                    </div>
+                    </h3>
+                  </div>
                 </article>
               </li>
 
@@ -419,7 +424,7 @@
                           class="posts__img"
                           src="./src/img/posts/new-posts/post-prev-2.jpg"
                           alt="Йога для домашних"
-                        />
+                        >
                       </a>
                     </div>
 
@@ -440,78 +445,78 @@
               <li class="posts__item posts__item--new-post-section">
                 <article class="posts__article posts__article--new-post-section">
                   <div class="last-posts__img-wrapper">
-                      <a href="#">
-                        <img
-                          class="posts__img"
-                          src="./src/img/posts/new-posts/post-prev-3.jpg"
-                          alt="Как мы превратили классное место в балкон"
-                        />
+                    <a href="#">
+                      <img
+                        class="posts__img"
+                        src="./src/img/posts/new-posts/post-prev-3.jpg"
+                        alt="Как мы превратили классное место в балкон"
+                      >
+                    </a>
+                  </div>
+
+                  <div class="posts__text-wrapper">
+                    <div class="posts__info posts__info--new-post-section">
+                      <span class="posts__date">14 июня 2019</span>
+                    </div>
+
+                    <h3 class="posts__title">
+                      <a href="#" class="posts__link">
+                        Как мы превратили классное место в балкон
                       </a>
-                    </div>
-
-                    <div class="posts__text-wrapper">
-                      <div class="posts__info posts__info--new-post-section">
-                        <span class="posts__date">14 июня 2019</span>
-                      </div>
-
-                      <h3 class="posts__title">
-                        <a href="#" class="posts__link">
-                          Как мы превратили классное место в балкон
-                        </a>
-                      </h3>
-                    </div>
+                    </h3>
+                  </div>
                 </article>
               </li>
 
               <li class="posts__item posts__item--new-post-section">
                 <article class="posts__article posts__article--new-post-section">
                   <div class="last-posts__img-wrapper">
-                      <a href="#">
-                        <img
-                          class="posts__img"
-                          src="./src/img/posts/new-posts/post-prev-4.jpg"
-                          alt="Кулинарный подход к науке"
-                        />
+                    <a href="#">
+                      <img
+                        class="posts__img"
+                        src="./src/img/posts/new-posts/post-prev-4.jpg"
+                        alt="Кулинарный подход к науке"
+                      >
+                    </a>
+                  </div>
+
+                  <div class="posts__text-wrapper">
+                    <div class="posts__info posts__info--new-post-section">
+                      <span class="posts__date">14 июня 2019</span>
+                    </div>
+
+                    <h3 class="posts__title">
+                      <a href="#" class="posts__link">
+                        Кулинарный подход к науке
                       </a>
-                    </div>
-
-                    <div class="posts__text-wrapper">
-                      <div class="posts__info posts__info--new-post-section">
-                        <span class="posts__date">14 июня 2019</span>
-                      </div>
-
-                      <h3 class="posts__title">
-                        <a href="#" class="posts__link">
-                          Кулинарный подход к науке
-                        </a>
-                      </h3>
-                    </div>
+                    </h3>
+                  </div>
                 </article>
               </li>
 
               <li class="posts__item posts__item--new-post-section">
                 <article class="posts__article posts__article--new-post-section">
                   <div class="last-posts__img-wrapper">
-                      <a href="#">
-                        <img
-                          class="posts__img"
-                          src="./src/img/posts/new-posts/post-prev-5.jpg"
-                          alt="Лучшие прически для распущенных волос"
-                        />
+                    <a href="#">
+                      <img
+                        class="posts__img"
+                        src="./src/img/posts/new-posts/post-prev-5.jpg"
+                        alt="Лучшие прически для распущенных волос"
+                      >
+                    </a>
+                  </div>
+
+                  <div class="posts__text-wrapper">
+                    <div class="posts__info posts__info--new-post-section">
+                      <span class="posts__date">14 июня 2019</span>
+                    </div>
+
+                    <h3 class="posts__title">
+                      <a href="#" class="posts__link">
+                        Лучшие прически для распущенных волос
                       </a>
-                    </div>
-
-                    <div class="posts__text-wrapper">
-                      <div class="posts__info posts__info--new-post-section">
-                        <span class="posts__date">14 июня 2019</span>
-                      </div>
-
-                      <h3 class="posts__title">
-                        <a href="#" class="posts__link">
-                          Лучшие прически для распущенных волос
-                        </a>
-                      </h3>
-                    </div>
+                    </h3>
+                  </div>
                 </article>
               </li>
             </ul>
@@ -519,10 +524,11 @@
         </section>
 
         <!-- СЕКЦИЯ: ПОИСК -->
-        <section class="sidebar__section search-form" id="search-form">
+        <section class="sidebar__section search-form" id="search-form-section">
+          <h2 class="title-visually-hidden">Поиск</h2>
           <form class="search-form__form" id="search-form" action="#" method="get">
-            <input class="search-form__input" type="search" placeholder="Найти..." required />
-            <button class="btn search-form__btn" type="submit" title="Найти">
+            <input class="search-form__input" name="search-input" type="search" placeholder="Найти..." required>
+            <button class="btn search-form__btn" type="submit" title="Найти">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512"><g clip-path="url(#clip0)"><path fill="#fff" stroke="#B59F5B" d="M373.403 339.292l-.29.344.312.324 121.857 126.737c10.117 10.524 9.782 27.302-.733 37.42l.347.36-.347-.36c-4.948 4.763-11.466 7.383-18.338 7.383-7.261 0-14.034-2.884-19.072-8.116L334.357 375.686l-.297-.309-.351.246c-34.78 24.442-75.457 37.317-118.145 37.317-113.708 0-206.22-92.513-206.22-206.22C9.344 93.012 101.856.5 215.564.5c113.707 0 206.22 92.512 206.22 206.22 0 48.668-17.125 95.416-48.381 132.572zm-4.546-132.572c0-84.528-68.765-153.293-153.293-153.293S62.271 122.192 62.271 206.72s68.765 153.293 153.293 153.293 153.293-68.765 153.293-153.293z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h512v512H0z"/></clipPath></defs></svg>
             </button>
           </form>
@@ -531,8 +537,8 @@
         <!-- СЕКЦИЯ: ПОДПИСКА НА РАССЫЛКУ -->
         <section class="sidebar__section newsletter" id="newsletter">
           <h3 class="sidebar-section-title title-separator">Рассылка</h3>
-          <form class="newsletter__form" id="newsletter-form" action="#" method="get">
-            <input class="newsletter__input" type="email" name="newsletter-email" placeholder="Ваш e-mail-адрес" required />
+          <form class="newsletter__form" id="newsletter-form" action="#" method="post">
+            <input class="newsletter__input" type="email" name="newsletter-email" placeholder="Ваш e-mail-адрес" required>
             <button class="btn newsletter__btn" type="submit" title="Подписаться">Подписаться</button>
             <output class="newsletter__output" name="newsletter-output"></output>
           </form>
@@ -546,24 +552,31 @@
               <li class="tags__item">
                 <a href="#" class="tags__link">Fashion</a>
               </li>
+
               <li class="tags__item">
                 <a href="#" class="tags__link">Music</a>
               </li>
+
               <li class="tags__item">
                 <a href="#" class="tags__link">Lifestyle</a>
               </li>
+
               <li class="tags__item">
                 <a href="#" class="tags__link">Art</a>
               </li>
+
               <li class="tags__item">
                 <a href="#" class="tags__link">Interior</a>
               </li>
+
               <li class="tags__item">
                 <a href="#" class="tags__link">Travel</a>
               </li>
+
               <li class="tags__item">
                 <a href="#" class="tags__link">Food</a>
               </li>
+
               <li class="tags__item">
                 <a href="#" class="tags__link">Health</a>
               </li>
@@ -709,7 +722,7 @@
           <ul class="social-media__list">
             <li class="social-media__item">
               <a href="#" class="social-media__link social-media__link--dribbble" target="_blank">
-                <svg class="social-media__icon" fill="transparent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <svg class="social-media__icon" id="icon-dribbble" fill="transparent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <g fill="inherit" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
                     stroke-width="1.8" transform="translate(1 1)">
                     <circle cx="9" cy="9" r="9" />
@@ -723,7 +736,7 @@
 
             <li class="social-media__item">
               <a href="#" class="social-media__link social-media__link--pinterest" target="_blank" rel="nofollow">
-                <svg class="social-media__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                <svg class="social-media__icon" id="icon-pinterest" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 310.05 310.05" xml:space="preserve">
                   <g id="XMLID_798_">
                     <path id="XMLID_799_" d="M245.265,31.772C223.923,11.284,194.388,0,162.101,0c-49.32,0-79.654,20.217-96.416,37.176
@@ -743,7 +756,7 @@
 
             <li class="social-media__item">
               <a href="#" class="social-media__link social-media__link--tumblr" target="_blank" rel="nofollow">
-                <svg class="social-media__icon" version="1.1" id="icon-tumblr" xmlns="http://www.w3.org/2000/svg"
+                <svg class="social-media__icon" id="icon-tumblr" version="1.1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 310 310" xml:space="preserve">
                   <g id="XMLID_828_">
                     <path id="XMLID_829_" d="M249.775,236.928c-1.613-0.873-3.58-0.789-5.119,0.221c-14.15,9.295-28.469,14.007-42.557,14.007
@@ -777,12 +790,12 @@
           </svg>
         </button>
 
-        <form class="form form--modal" action="#" method="post">
+        <form class="form form--modal" id="modal-form" action="#" method="post">
           <h2 class="section__title title-separator">Ваш фидбек</h2>
 
           <div class="form__group">
             <label class="form__label" for="modal-select">Как часто вы заходите на сайт?</label>
-            <select class="form__select" name="modal-select">
+            <select class="form__select" id="modal-select" name="modal-select">
               <option class="form__option" value="Почти каждый день">Почти каждый день</option>
               <option class="form__option" value="Раз в несколько дней">Раз в несколько дней</option>
               <option class="form__option" value="Раз в несколько недель">Раз в несколько недель</option>
@@ -791,14 +804,14 @@
           </div>
 
           <div class="form__group">
-            <label class="form__label" for="modal-radio">Вы подписаны на e-mail рассылку?</label>
+            <label class="form__label" for="modal-radio-yes">Вы подписаны на e-mail рассылку?</label>
             <div class="form__radio-group">
               <label class="form__label--radio">
-                <input class="form__radio-input" type="radio" name="modal-radio" value="Да" checked />
+                <input class="form__radio-input" id="modal-radio-yes" name="modal-radio" type="radio" value="Да" checked>
                 <span class="form__radio-text">Да</span>
               </label>
               <label class="form__label--radio">
-                <input class="form__radio-input" type="radio" name="modal-radio" value="Нет" />
+                <input class="form__radio-input" id="modal-radio-no" name="modal-radio" type="radio" value="Нет">
                 <span class="form__radio-text">Нет</span>
               </label>
             </div>
@@ -808,7 +821,12 @@
             <label class="form__label" for="modal-textarea">
               Расскажите, какой контент вы хотели бы видеть на нашем сайте?
             </label>
-            <textarea class="form__textarea" name="modal-textarea" placeholder="Может, больше рецептов?"></textarea>
+            <textarea 
+              class="form__textarea"
+              id="modal-textarea"
+              name="modal-textarea"
+              placeholder="Может, больше рецептов?">
+            </textarea>
           </div>
 
           <button class="btn form__btn form__btn--modal">Отправить</button>

@@ -42,7 +42,7 @@
 
 
 /* Общие стили шапки */
-header.header-main-page {
+.header--main-page {
   position: relative;
 
   padding: var(--padding-header-ld);
@@ -56,7 +56,7 @@ header.header-main-page {
   color: var(--color-text-secondary);
 }
 
-header.header-main-page::before {
+.header--main-page::before {
   content: "";
 
   position: absolute;
@@ -93,33 +93,34 @@ header.header-main-page::before {
   line-height: 0;
 }
 
-nav.nav-primary {
+.nav--primary {
   align-self: flex-end;
 }
 
-ul.nav-primary__list {
+.nav--primary__list {
   display: none;
   font-size: 18px;
   text-align: center;
 }
 
-a.nav-primary__link {
+.nav--primary__link {
   font-size: 1em;
   color: inherit;
 }
 
-a.nav-primary__link:hover {
+.nav--primary__link:hover {
   color: var(--color-text-secondary);
 }
 
 /* Меню бургер в мобильной версии */
-button.nav-primary__hamburger > div {
+.nav--primary__hamburger > span {
+  display: block;
   width: 24px;
   height: 3px;
   background-color: var(--color-text-secondary);
 }
 
-button.nav-primary__hamburger > div:nth-child(2) {
+.nav--primary__hamburger > span:nth-child(2) {
   margin: 5px 0;
 }
 
@@ -326,7 +327,7 @@ button.nav-primary__hamburger > div:nth-child(2) {
 }
 
 .posts__info--new-post-section {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 
@@ -648,6 +649,17 @@ button.search-form__btn {
   font-size: 13px;
 }
 
+.form__btn--modal {
+  width: 100%;
+}
+
+
+/* 
+  ФОРМА ОБРАТНОЙ СВЯЗИ
+  ==========================================================================
+*/
+
+
 .form__group {
   margin-bottom: 30px;
 }
@@ -691,10 +703,6 @@ button.search-form__btn {
   background: url("../svg/form-empty-circle.svg") no-repeat center center / cover;
 
   vertical-align: middle;
-}
-
-.form__btn--modal {
-  width: 100%;
 }
 
 .form__output {
@@ -768,7 +776,7 @@ button.search-form__btn {
 
 @media (min-width: 641px) and (max-width: 1199px) {
   /* СЕКЦИЯ: ШАПКА */
-  header.header-main-page {
+  .header--main-page {
     background-image: url("../img/header/banner-bg-tablet.jpg");
     background-position-x: left;
 
@@ -856,7 +864,7 @@ button.search-form__btn {
     margin: 0;
   }
 
-  nav.nav-primary {
+  .nav--primary {
     align-self: center;
   }
 
@@ -924,7 +932,7 @@ button.search-form__btn {
   }
 
   /* СЕКЦИЯ: ШАПКА */
-  ul.nav-primary__list {
+  .nav--primary__list {
     display: flex;
     gap: 35px;
 
@@ -932,7 +940,7 @@ button.search-form__btn {
     text-transform: uppercase;
   }
 
-  button.nav-primary__hamburger {
+  .nav--primary__hamburger {
     display: none;
   }
 
@@ -989,7 +997,7 @@ button.search-form__btn {
   }
 
   /* СЕКЦИЯ: ШАПКА */
-  header.header-main-page {
+  .header--main-page {
     background-image: url("../img/header/banner-bg.jpg");
     background-position: center center;
   }
@@ -998,13 +1006,13 @@ button.search-form__btn {
     font-size: 16px;
   }
 
-  .nav-primary a.link-underline::after {
+  .nav--primary a.link-underline::after {
     background-color: var(--color-text-secondary);
   }
 
   /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
   .section-trends {
-    padding-top: 45px;
+    padding-top: 64px;
   }
 
   .trends__article {
