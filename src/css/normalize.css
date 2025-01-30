@@ -216,12 +216,6 @@ a.link-underline::after {
   transition: width 0.3s ease-in-out;
 }
 
-/* Hover state for links with "link-underline" class & "::after" pseudo-element */
-
-a.link-underline:hover::after {
-  width: 100%;
-}
-
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -334,14 +328,12 @@ a.btn
   color: var(--color-text-secondary); /* 3 */
 }
 
-/* Hover state for buttons */
-
-button.btn:hover {
+button.btn:focus,
+button.btn:active,
+a.btn:focus,
+a.btn:active
+{
   background-color: var(--color-text-primary);
-}
-
-a.btn:hover {
-  color: var(--color-text-secondary);
 }
 
 /**
