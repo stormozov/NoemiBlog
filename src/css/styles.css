@@ -107,10 +107,6 @@
   color: inherit;
 }
 
-.nav--primary__link:hover {
-  color: var(--color-text-secondary);
-}
-
 /* Меню бургер в мобильной версии */
 .nav--primary__hamburger > span {
   display: block;
@@ -547,6 +543,10 @@ button.search-form__btn {
   margin-bottom: -30px;
 }
 
+.goods__img {
+  transition: var(--transition-default);
+}
+
 .goods__text-wrapper {
   z-index: 2;
 
@@ -792,6 +792,74 @@ button.search-form__btn {
   МЕДИА-ЗАПРОСЫ
   ==========================================================================
 */
+
+
+@media (any-hover: hover) {
+  /* ОБЩИЕ СТИЛИ */
+  .btn:hover {
+    background: var(--color-text-primary);
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  a.btn:hover {
+    color: var(--color-text-secondary);
+  }
+
+  a.link-underline:hover::after {
+    width: 100%;
+  }
+
+  button.btn:hover {
+    background-color: var(--color-text-primary);
+  }
+
+  /* ШАПКА */
+  .nav--primary__link:hover {
+    color: var(--color-text-secondary);
+  }
+
+  /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
+  .trends__article:hover .trends__text-wrapper {
+    padding: 45px 35px 35px;
+  }
+
+  .trends__text-wrapper:hover .trends__title-link {
+    color: var(--color-accent);
+  }
+
+  /* СЕКЦИЯ (САЙДБАР): ТЕГИ */
+  .tags__link:hover {
+    background: var(--color-border);
+  }
+
+  /* СЕКЦИЯ (САЙДБАР): ПОИСК */
+  .search-form__btn:hover svg {
+    transform: rotate(-360deg);
+  }
+
+  /* СЕКЦИЯ: НАШИ ИЗДЕЛИЯ */
+  .goods__item:hover .goods__img {
+    transform: rotate(-5deg);
+  }
+
+  .goods__link:hover {
+    text-decoration: underline;
+  }
+
+  /* СЕКЦИЯ: ФУТЕР */
+  .social-media__link:hover .social-media__icon {
+    fill: var(--color-accent);
+    transform: rotate(-360deg);
+  }
+
+  /* МОДАЛЬНОЕ ОКНО */
+  .modal__btn-close:hover {
+    transform: rotate(-360deg);
+  }
+}
 
 
 @media (orientation: landscape) and (min-width: 461px) and (max-width: 719px) {
@@ -1095,18 +1163,6 @@ button.search-form__btn {
     margin: 0 auto;
   }
 
-  .btn:hover {
-    background: var(--color-text-primary);
-  }
-
-  a:hover {
-    color: var(--color-accent);
-  }
-
-  a.link-underline:hover::after {
-    width: 100%;
-  }
-
   /* СЕКЦИЯ: ШАПКА */
   .header--main-page {
     background-image: url("../img/header/banner-bg.jpg");
@@ -1136,14 +1192,6 @@ button.search-form__btn {
     background-color: var(--color-accent);
   }
 
-  .trends__article:hover .trends__text-wrapper {
-    padding: 45px 35px 35px;
-  }
-
-  .trends__text-wrapper:hover .trends__title-link {
-    color: var(--color-accent);
-  }
-
   /* СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ */
   .sidebar__section:not(:last-child) {
     padding-bottom: 60px;
@@ -1163,38 +1211,14 @@ button.search-form__btn {
     margin: 35px 0 50px;
   }
 
-  /* СЕКЦИЯ (САЙДБАР): ПОИСК */
-  .search-form__btn:hover svg {
-    transform: rotate(-360deg);
-  }
-
-  /* СЕКЦИЯ (САЙДБАР): ТЕГИ */
-  .tags__link:hover {
-    background: var(--color-border);
-  }
-
   /* СЕКЦИЯ: НАШИ ИЗДЕЛИЯ */
   .goods__item {
     max-width: 347px;
   }
 
-  .goods__link:hover {
-    text-decoration: underline;
-  }
-
   /* СЕКЦИЯ: ФУТЕР */
-  .social-media__link:hover .social-media__icon {
-    fill: var(--color-accent);
-    transform: rotate(-360deg);
-  }
-
   .footer__copy {
     margin-top: 70px;
-  }
-
-  /* МОДАЛЬНОЕ ОКНО */
-  .modal__btn-close:hover {
-    transform: rotate(-360deg);
   }
 }
 
