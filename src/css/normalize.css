@@ -593,3 +593,46 @@ template {
 [hidden] {
   display: none;
 }
+
+/* Text line clamp
+   ========================================================================== */
+
+/**
+ * Add additional classes to limit the number of lines of various texts to prevent the layout of text blocks from 
+ * breaking when transferring more than allowed text to text blocks.
+ */
+
+.text-clamp,
+.text-clamp--1,
+.text-clamp--2,
+.text-clamp--3,
+.text-clamp--4
+{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 
+ * Modifier classes for various line constraints
+ */
+
+.text-clamp--1 {
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+}
+
+.text-clamp--2 {
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
+
+.text-clamp--3 {
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+}
+
+.text-clamp--4 {
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+}
