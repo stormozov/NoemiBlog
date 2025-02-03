@@ -304,7 +304,6 @@
   ==========================================================================
 */
 
-
 .homepage-main .container {
   display: flex;
   flex-direction: column;
@@ -381,6 +380,7 @@
 
 .sidebar-section-title {
   margin-bottom: 24px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -483,7 +483,6 @@ button.search-form__btn {
 .topics {
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
   color: var(--color-text-primary);
 }
 
@@ -1026,7 +1025,7 @@ button.search-form__btn {
     line-height: 3.438rem;
   }
 
-  h2 {
+  h2, h3 {
     font-size: 17px;
   }
 
@@ -1149,11 +1148,13 @@ button.search-form__btn {
 
 @media (min-width: 1200px) {
   /* ОБЩИЕ СТИЛИ */
-  h2 {
+  h2, h3 {
     font-size: 20px;
   }
 
-  .section:not(:last-child) {
+  .section:not(:last-child),
+  .homepage-main
+  {
     padding-bottom: 64px;
   }
 
