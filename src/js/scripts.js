@@ -20,9 +20,17 @@
   *     - Запоминает время последнего закрытия модального окна в localStorage, чтобы предотвратить его повторное открытие в течение двух дней.
   *     - Закрывает модальное окно при нажатии на кнопку закрытия или на оверлей.
   * 
-  * 3. DOMContentLoaded: 
+  * 3. adjustCardHeights: 
+  *   - Описание: Автоматически перестраивает высоту карточек в списке.
+  *   - Как это работает: 
+  *     - Выбирает все карточки в "goods__list".
+  *     - Находит максимальную высоту среди карточек.
+  *     - Устанавливает всем карточкам эту максимальную высоту.
+  * 
+  * 4. DOMContentLoaded: 
   *   - Описание: Инициализирует функции мобильного меню и модального окна при загрузке страницы.
-*/
+  *   - Также вызывает adjustCardHeights для установки высоты карточек.
+  */
 
 const BODY = document.body;
 
@@ -45,19 +53,19 @@ const toggleMobileMenu = () => {
 */
 
 const openCloseModal = () => {
-  const modal = document.querySelector('.modal');
-  const modalOverlay = document.querySelector('.modal__overlay');
-  const modalButtonClose = document.querySelector('.modal__btn-close');
+  const modal = document.querySelector(".modal");
+  const modalOverlay = document.querySelector(".modal__overlay");
+  const modalButtonClose = document.querySelector(".modal__btn-close");
 
   const removeModalClasses = () => {
-    document.body.classList.remove('body-modal-open');
-    modal.classList.remove('modal--open');
+    document.body.classList.remove("body-modal-open");
+    modal.classList.remove("modal--open");
 
-    localStorage.setItem('modalLastClosed', Date.now());
+    localStorage.setItem("modalLastClosed", Date.now());
   };
 
   const shouldShowModal = () => {
-    const lastClosed = localStorage.getItem('modalLastClosed');
+    const lastClosed = localStorage.getItem("modalLastClosed");
     if (!lastClosed) return true;
 
     const twoDaysInMilliseconds = 2 * 24 * 60 * 60 * 1000;
@@ -65,23 +73,43 @@ const openCloseModal = () => {
   };
 
   // Открытие модального окна при выходе мыши за пределы экрана в ПК-версиях
-  document.addEventListener('mouseleave', e => {
+  document.addEventListener("mouseleave", e => {
     if (e.clientY < 0 && shouldShowModal()) {
-      document.body.classList.add('body-modal-open');
-      modal.classList.add('modal--open');
+      document.body.classList.add("body-modal-open");
+      modal.classList.add("modal--open");
     }
   });
 
   // Открытие модального окна при нажатии на экран
-  document.addEventListener('touchstart', e => {
+  document.addEventListener("touchstart", e => {
     if (shouldShowModal()) {
-      document.body.classList.add('body-modal-open');
-      modal.classList.add('modal--open');
+      document.body.classList.add("body-modal-open");
+      modal.classList.add("modal--open");
     }
   });
 
-  modalButtonClose.addEventListener('click', removeModalClasses);
-  modalOverlay.addEventListener('click', removeModalClasses);
+  modalButtonClose.addEventListener("click", removeModalClasses);
+  modalOverlay.addEventListener("click", removeModalClasses);
+};
+
+/*
+  АВТОМАТИЧЕСКАЯ ПЕРЕСТРОЙКА ВЫСОТЫ КАРТОЧЕК
+*/
+
+const adjustCardHeights = (cardsSelector) => {
+  const cards = document.querySelectorAll(cardsSelector);
+  let maxHeight = 0;
+
+  // Находим максимальную высоту
+  cards.forEach(card => {
+    card.style.height = "auto"; // Сбрасываем высоту
+    maxHeight = Math.max(maxHeight, card.offsetHeight);
+  });
+
+  // Устанавливаем всем карточкам максимальную высоту
+  cards.forEach(card => {
+    card.style.height = `${maxHeight}px`;
+  });
 };
 
 /*
@@ -91,4 +119,5 @@ const openCloseModal = () => {
 document.addEventListener("DOMContentLoaded", () => {
   toggleMobileMenu();
   openCloseModal();
+  adjustCardHeights(".goods__text-wrapper");
 });

@@ -294,7 +294,6 @@
 }
 
 .trends__title-link {
-  display: inline-block;
   color: inherit;
 }
 
@@ -303,7 +302,6 @@
   СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ
   ==========================================================================
 */
-
 
 .homepage-main .container {
   display: flex;
@@ -343,11 +341,19 @@
   gap: 15px;
 }
 
+.posts__img--last-post-section {
+  transition: var(--transition-default);
+}
+
 .posts__info {
   font-size: 12px;
 }
 
 .posts__info--last-post-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
   margin: 22px 0;
 }
 
@@ -356,7 +362,6 @@
 }
 
 .posts__author {
-  margin-left: 14px;
   font-weight: 700;
 }
 
@@ -381,6 +386,7 @@
 
 .sidebar-section-title {
   margin-bottom: 24px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -483,7 +489,6 @@ button.search-form__btn {
 .topics {
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
   color: var(--color-text-primary);
 }
 
@@ -823,11 +828,15 @@ button.search-form__btn {
 
   /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
   .trends__article:hover .trends__text-wrapper {
-    padding: 45px 35px 35px;
+    padding: 45px 20px 20px;
   }
 
   .trends__text-wrapper:hover .trends__title-link {
     color: var(--color-accent);
+  }
+
+  .posts__item--last-post-section:hover .posts__img--last-post-section {
+    transform: rotate(-5deg) scale(0.88);
   }
 
   /* СЕКЦИЯ (САЙДБАР): ТЕГИ */
@@ -859,34 +868,9 @@ button.search-form__btn {
   .modal__btn-close:hover {
     transform: rotate(-360deg);
   }
-}
 
-
-@media (orientation: landscape) and (min-width: 461px) and (max-width: 719px) {
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__list--last-post-section,
-  .sidebar__section {
-    max-width: 381px;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (orientation: portrait) and (min-width: 461px) and (max-width: 767px) {
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__list--last-post-section,
-  .sidebar__section
-  {
-    max-width: 381px;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 720px) and (max-width: 767px) {
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__article--last-post-section {
-    flex-direction: row;
+  .topics__link:hover {
+    margin-left: 6px;
   }
 }
 
@@ -935,9 +919,27 @@ button.search-form__btn {
   .trends__item {
     flex: 1 1 calc(50% - 4px);
   }
+
+  /* СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ */
+  .homepage-main .container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 35px;
+  }
+
+  .homepage-main .sidebar {
+    max-width: 270px;
+    min-width: 270px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
+  /* ОБЩИЕ СТИЛИ */
+  .container {
+    padding: 0 35px;
+  }
+
   /* СЕКЦИЯ: ШАПКА */
   .header--main-page {
     background-image: url("../img/header/banner-bg-tablet.jpg");
@@ -945,18 +947,27 @@ button.search-form__btn {
 
     padding: var(--padding-header-sd);
   }
+
+  .posts__img--last-post-section {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 641px) and (max-width: 1366px) {
   /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
   .post-tags {
     gap: 1.5vw;
-    font-size: 1vw;
   }
 
   /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
   .trends__list {
     flex-wrap: nowrap;
+  }
+
+  .trends__article:hover .trends__text-wrapper {
+    padding: 2vw 1.5vw 1.5vw;
   }
 
   .trends__text-wrapper {
@@ -1026,12 +1037,8 @@ button.search-form__btn {
     line-height: 3.438rem;
   }
 
-  h2 {
+  h2, h3 {
     font-size: 17px;
-  }
-
-  .container {
-    padding: 0 35px;
   }
 
   /* СЕКЦИЯ: ШАПКА */
@@ -1056,23 +1063,6 @@ button.search-form__btn {
     max-width: 640px;
     width: 100%;
     margin: 0 auto;
-  }
-
-  /* СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ */
-  .homepage-main .container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 35px;
-  }
-
-  .section-last-posts {
-    max-width: 392px;
-    width: 100%;
-  }
-
-  .homepage-main .sidebar {
-    max-width: 270px;
-    width: 100%;
   }
 
   /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
@@ -1129,15 +1119,14 @@ button.search-form__btn {
 }
 
 @media (min-width: 1024px) {
+  /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
+  .trends__article:hover .trends__text-wrapper {
+    padding: 45px 35px 35px;
+  }
+
   /* СЕКЦИЯ: ПОСЛЕДНИЕ ПОСТЫ */
   .section-last-posts {
     max-width: 773px;
-  }
-
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__article--last-post-section {
-    flex-direction: row;
-    gap: 30px;
   }
 
   /* СЕКЦИЯ: НАШИ ИЗДЕЛИЯ */
@@ -1149,11 +1138,13 @@ button.search-form__btn {
 
 @media (min-width: 1200px) {
   /* ОБЩИЕ СТИЛИ */
-  h2 {
+  h2, h3 {
     font-size: 20px;
   }
 
-  .section:not(:last-child) {
+  .section:not(:last-child),
+  .homepage-main
+  {
     padding-bottom: 64px;
   }
 
@@ -1201,6 +1192,11 @@ button.search-form__btn {
   .posts__item--last-post-section {
     padding-bottom: 0;
     border-bottom: 0;
+  }
+
+  .posts__article--last-post-section {
+    flex-direction: row;
+    gap: 30px;
   }
 
   .posts__item--last-post-section:not(:last-child) {
