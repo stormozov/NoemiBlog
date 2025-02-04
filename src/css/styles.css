@@ -346,6 +346,10 @@
 }
 
 .posts__info--last-post-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
   margin: 22px 0;
 }
 
@@ -354,7 +358,6 @@
 }
 
 .posts__author {
-  margin-left: 14px;
   font-weight: 700;
 }
 
@@ -821,7 +824,7 @@ button.search-form__btn {
 
   /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
   .trends__article:hover .trends__text-wrapper {
-    padding: 45px 35px 35px;
+    padding: 45px 20px 20px;
   }
 
   .trends__text-wrapper:hover .trends__title-link {
@@ -856,35 +859,6 @@ button.search-form__btn {
   /* МОДАЛЬНОЕ ОКНО */
   .modal__btn-close:hover {
     transform: rotate(-360deg);
-  }
-}
-
-
-@media (orientation: landscape) and (min-width: 461px) and (max-width: 719px) {
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__list--last-post-section,
-  .sidebar__section {
-    max-width: 381px;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (orientation: portrait) and (min-width: 461px) and (max-width: 767px) {
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__list--last-post-section,
-  .sidebar__section
-  {
-    max-width: 381px;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 720px) and (max-width: 767px) {
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__article--last-post-section {
-    flex-direction: row;
   }
 }
 
@@ -933,9 +907,27 @@ button.search-form__btn {
   .trends__item {
     flex: 1 1 calc(50% - 4px);
   }
+
+  /* СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ */
+  .homepage-main .container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 35px;
+  }
+
+  .homepage-main .sidebar {
+    max-width: 270px;
+    min-width: 270px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
+  /* ОБЩИЕ СТИЛИ */
+  .container {
+    padding: 0 35px;
+  }
+
   /* СЕКЦИЯ: ШАПКА */
   .header--main-page {
     background-image: url("../img/header/banner-bg-tablet.jpg");
@@ -943,18 +935,27 @@ button.search-form__btn {
 
     padding: var(--padding-header-sd);
   }
+
+  .posts__img--last-post-section {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 641px) and (max-width: 1366px) {
   /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
   .post-tags {
     gap: 1.5vw;
-    font-size: 1vw;
   }
 
   /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
   .trends__list {
     flex-wrap: nowrap;
+  }
+
+  .trends__article:hover .trends__text-wrapper {
+    padding: 2vw 1.5vw 1.5vw;
   }
 
   .trends__text-wrapper {
@@ -1028,10 +1029,6 @@ button.search-form__btn {
     font-size: 17px;
   }
 
-  .container {
-    padding: 0 35px;
-  }
-
   /* СЕКЦИЯ: ШАПКА */
   .header__top {
     flex-direction: row;
@@ -1054,23 +1051,6 @@ button.search-form__btn {
     max-width: 640px;
     width: 100%;
     margin: 0 auto;
-  }
-
-  /* СЕКЦИЯ: ОСНОВНАЯ ЧАСТЬ ГЛАВНОЙ СТРАНИЦЫ */
-  .homepage-main .container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 35px;
-  }
-
-  .section-last-posts {
-    max-width: 392px;
-    width: 100%;
-  }
-
-  .homepage-main .sidebar {
-    max-width: 270px;
-    width: 100%;
   }
 
   /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
@@ -1127,15 +1107,14 @@ button.search-form__btn {
 }
 
 @media (min-width: 1024px) {
+  /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
+  .trends__article:hover .trends__text-wrapper {
+    padding: 45px 35px 35px;
+  }
+
   /* СЕКЦИЯ: ПОСЛЕДНИЕ ПОСТЫ */
   .section-last-posts {
     max-width: 773px;
-  }
-
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__article--last-post-section {
-    flex-direction: row;
-    gap: 30px;
   }
 
   /* СЕКЦИЯ: НАШИ ИЗДЕЛИЯ */
@@ -1201,6 +1180,11 @@ button.search-form__btn {
   .posts__item--last-post-section {
     padding-bottom: 0;
     border-bottom: 0;
+  }
+
+  .posts__article--last-post-section {
+    flex-direction: row;
+    gap: 30px;
   }
 
   .posts__item--last-post-section:not(:last-child) {
