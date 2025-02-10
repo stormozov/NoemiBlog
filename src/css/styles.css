@@ -342,6 +342,7 @@
 }
 
 .posts__img--last-post-section {
+  width: 100%;
   transition: var(--transition-default);
 }
 
@@ -533,6 +534,12 @@ button.search-form__btn {
   width: 100%;
 }
 
+.goods__article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .goods__img-wrapper,
 .goods__text-wrapper
 {
@@ -545,14 +552,17 @@ button.search-form__btn {
   display: flex;
   justify-content: center;
 
-  margin-bottom: -30px;
+  max-width: 90%;
+  margin: 0 auto -30px;
 }
 
 .goods__img {
+  width: 100%;
   transition: var(--transition-default);
 }
 
 .goods__text-wrapper {
+  flex-grow: 1;
   z-index: 2;
 
   padding: 45px 20px 20px;
@@ -874,25 +884,6 @@ button.search-form__btn {
   }
 }
 
-@media (max-width: 480px) {
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .posts__img--last-post-section {
-    width: 100%;
-  }
-}
-
-@media (min-width: 600px) {
-  /* МОДАЛЬНОЕ ОКНО */
-  .modal__content {
-    width: max-content;
-  }
-
-  .form--modal {
-    width: 390px;
-    padding: 50px 30px 54px;
-  }
-}
-
 @media (orientation: landscape) and (max-width: 640px) {
   /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
   .post-tags {
@@ -911,6 +902,18 @@ button.search-form__btn {
 
   .trends__title {
     font-size: 1.9vw;
+  }
+}
+
+@media (min-width: 600px) {
+  /* МОДАЛЬНОЕ ОКНО */
+  .modal__content {
+    width: max-content;
+  }
+
+  .form--modal {
+    width: 390px;
+    padding: 50px 30px 54px;
   }
 }
 
@@ -948,34 +951,10 @@ button.search-form__btn {
     padding: var(--padding-header-sd);
   }
 
+  /* КАРТОЧКИ ПОСТОВ */
   .posts__img--last-post-section {
-    width: 100%;
-    max-height: 300px;
+    max-height: 350px;
     object-fit: cover;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 641px) and (max-width: 1366px) {
-  /* КАРТОЧКИ ПОСТОВ (ОБЩИЕ СТИЛИ КАРТОЧЕК ПОСТОВ) */
-  .post-tags {
-    gap: 1.5vw;
-  }
-
-  /* СЕКЦИЯ: СЕЙЧАС В ТРЕНДЕ */
-  .trends__list {
-    flex-wrap: nowrap;
-  }
-
-  .trends__article:hover .trends__text-wrapper {
-    padding: 2vw 1.5vw 1.5vw;
-  }
-
-  .trends__text-wrapper {
-    padding: 1.5vw;
-  }
-
-  .trends__title {
-    font-size: 1.3vw;
   }
 }
 
@@ -1205,6 +1184,10 @@ button.search-form__btn {
 
   .posts__info--last-post-section {
     margin: 35px 0 50px;
+  }
+
+  .posts__img--last-post-section {
+    width: auto;
   }
 
   /* СЕКЦИЯ: НАШИ ИЗДЕЛИЯ */
